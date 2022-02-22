@@ -2,6 +2,7 @@
 from numpy import sort #this appeared on its own
 import pandas as pd
 import csv #added this to try to get code to run, don't know if it helped
+import matplotlib.pyplot as plt
 
 #read in the data
 df = pd.read_csv('NFLX.csv')
@@ -26,3 +27,9 @@ df['Date'].max() #this resulted in 01/11/2022
 #this data is ~20 years of Netflix stock prices (!!)
 
 df.info #4945 rows, 7 columns
+
+#trying to successfully use matplotlib 
+
+df.plot(kind= 'scatter',x='Date', y='High')
+plt.title('scatterplot')
+plt.show()
